@@ -11,19 +11,20 @@
 </ul>
 
 <div class="container">
-    {{#if this.seedError}}
+    {{#if this.healthcheckStatusError}}
         <div class="row justify-content-center">
             <img src="images/x-red.png" width="50px" height="50px" alt="check-mark-green">
         </div>
         <div class="row justify-content-center">
-            <h3>{{this.seedError}}</h3>
+            <p>{{this.healthcheckStatusError}}</p>
         </div>
         <div class="row justify-content-center">
-            <p>After you fix the problem, click the button below to try and seed the data again:</p>
+            <h3>Looks like something is wrong. Check that your elasticsearch client is initialized.</h3>
+            <p>After you fix the problem, click the button below to go back to the home page:</p>
         </div>
         <div class="row justify-content-center">
-            <form action="/seed" method="POST">
-                <button type="submit" class="btn btn-warning">Seed Data</button>
+            <form action="/" method="GET">
+                <button type="submit" class="btn btn-warning">Home</button>
             </form>
         </div>
     {{else}}
@@ -31,23 +32,15 @@
             <img src="images/check-mark-green.png" width="50px" height="50px" alt="x-red">
         </div>
         <div class="row justify-content-center">
-            <p>{{this.seedSuccess}}</p>
+            <p>{{this.healthcheckStatusSuccess}}</p>
         </div>
         <div class="row justify-content-center">
-            <h3>Great! Looks like our data was loaded into the client successfully.</h3>
-            <p>Click the button below to go to the search page and start exploring your data:</p>
+            <h3>Let's start by seeding some data into our elasticsearch client.</h3>
+            <p>Click the button below to seed data about the Netflix original series Black Mirror into the elasticsearch client:</p>
         </div>
         <div class="row justify-content-center">
-            <form action="/explore" method="GET">
-                <button type="submit" class="btn btn-success">Start Exploring the Data</button>
-            </form>
-        </div>
-        <div class="row justify-content-center">
-            <h3>If you'd like to view the raw json data, click the button below:</h3>
-        </div>
-        <div class="row justify-content-center">
-            <form action="/json" method="GET">
-                <button type="submit" class="btn btn-primary">View raw JSON data</button>
+            <form action="/seed" method="POST">
+                <button type="submit" class="btn btn-success">Seed Data</button>
             </form>
         </div>
     {{/if}}

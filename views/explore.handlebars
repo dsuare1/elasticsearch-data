@@ -1,0 +1,66 @@
+<ul class="nav">
+    <li class="nav-item">
+        <a class="nav-link active" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/explore">Explore Data</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/json">Raw JSON</a>
+    </li>
+</ul>
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <h1>Explore data about Black Mirror</h1>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <h3>Explore all episodes by season</h3>
+            <p>Select a season to see data about all episodes in that season:</p>
+            <form action="/search/season" method="POST">
+                <label for="season-number">Season Number</label>
+                <input id="season-number" type="number" name="season-number" value="1" min="1" max="4">
+                <input type="submit" class="btn btn-success" value="Explore">
+            </form>
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-md-4">
+            <h3>Explore all episode summaries by keyword search</h3>
+            <p>Enter a word or phrase to search for episodes that have summaries that contain that word or phrase:</p>
+            <form action="/search/keyword" method="POST">
+                <label for="summary-keyword-phrase">Keyword or Phrase</label>
+                <input id="summary-keyword-phrase" type="text" name="keyword" value="keyword or phrase">
+                <input type="submit" class="btn btn-success" value="Explore">
+            </form>
+        </div>
+    </div>
+</div>
+
+{{#if this.hits}}
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <ul class="list-group">
+                    {{#each hits}}
+                        <li class="list-group-item">
+                            <h3>{{this._source.name}}</h3>
+                            <h4>Season {{this._source.season}}</h4>
+                            <p>Episode {{this._source.number}}</p>
+                            <img src={{this._source.image.medium}}>
+                            <p><strong>Description:</strong>  {{this._source.summary}}</p>
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+{{else if this.noResults}}
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h2>{{this.noResults}}</h2>
+            </div>
+        </div>
+    </div>
+{{/if}}

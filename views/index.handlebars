@@ -1,8 +1,32 @@
-<section id="data">
-    <div id="title">
-        <h3>Data:</h3>
+<ul class="nav">
+    <li class="nav-item">
+        <a class="nav-link active" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/explore">Explore Data</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/json">Raw JSON</a>
+    </li>
+</ul>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <h1 style="text-align: center">Welcome to elasticsearch!</h1>
+        </div>
     </div>
-    <div id="data-container">
-        {{this.msg}}
+</div>
+<div class="container">
+    <div class="row justify-content-center">
+        <h3>{{this.healthcheckMsg}}</h3>
     </div>
-</section>
+    <div class="row justify-content-center">
+        <h5>{{this.healthcheckInstructions}}</h5>
+    </div>
+    <div class="row justify-content-center">
+        <form action="/healthcheck" method="GET">
+            <button type="submit" class="btn btn-primary">Healthcheck elasticsearch client</button>
+        </form>
+    </div>
+</div>
