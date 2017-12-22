@@ -1,6 +1,6 @@
+<a id="top"></a>
 # Derrick Suarez - elasticsearch-data
 
-<a id="top"></a>
 * [About](#about)
 * [Installation](#installation)
 * [Instructions](#instructions)
@@ -61,7 +61,7 @@ Navigate your favorite browser to [localhost](http://localhost:8080 "http://loca
 
 If you click on the "Healthcheck elasticsearch client" button, you should see the following error page:
 
-(image here)
+![elasticsearch-data landing page](https://github.com/dsuare1/elasticsearch-data/blob/master/public/images/elasticsearch-data-error-page.png?raw=true)
 
 This is expected behavior because at this point, we do not yet have an `elasticsearch` instance up and running.
 
@@ -92,13 +92,13 @@ Now that we have our `elasticsearch` instance up and running, leave the navigate
 
 We should now see the following success page:
 
-(image here)
+![elasticsearch-data landing page](https://github.com/dsuare1/elasticsearch-data/blob/master/public/images/elasticsearch-data-success-page.png?raw=true)
 
 We can click the "Seed Data" button to get some data bout the &copy; Netflix original series Black Mirror (one of my favorite shows) loaded into our `elasticsearch` client.
 
 If everything went well, you should see the following success page:
 
-(image here)
+![elasticsearch-data landing page](https://github.com/dsuare1/elasticsearch-data/blob/master/public/images/elasticsearch-data-data-seeded-success.png?raw=true)
 
 We can now click on "Start Exploring the Data" to leverage the search functionality of `elasticsearch` or "View raw JSON data" to see the JSON-formatted data that was loaded into the client.
 
