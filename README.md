@@ -55,7 +55,7 @@ Elasticsearch INFO: 2017-12-20T15:58:20Z
 Server listening on port: 8080
 ```
 
-Navigate your favorite browser to [localhost](http://localhost:8080 "http://localhost:8080") and you should see the following landing page:
+Navigate your favorite browser to [localhost:8080](http://localhost:8080 "http://localhost:8080") and you should see the following landing page:
 
 ![elasticsearch-data landing page](https://github.com/dsuare1/elasticsearch-data/blob/master/public/images/elasticsearch-data-landing-page.png?raw=true)
 
