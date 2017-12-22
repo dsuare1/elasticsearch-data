@@ -76,7 +76,7 @@ This will install the binaries for `elasticsearch` to the following directory:
 
 `/usr/local/bin/elasticsearch`
 
-To fire up a new `elasticsearch` instance, copy and paste that into your terminal and press enter
+To fire up a new `elasticsearch` instance, copy and paste that into your terminal and press enter.
 
 _Alternatively, you can add an `alias` to your shell terminal; I use `zsh` terminal and I have the following `alias` defined in my `~/.zshrc` config file:_
 ```bash
@@ -88,13 +88,13 @@ $ elasticsearch
 ```
 and it will point to the complete binary path for `elasticsearch`
 
-Now that we have our `elasticsearch` instance up and running, leave the navigate back to [localhost:8080](http://localhost:8080 "http://localhost:8080"), click the "Home" button, and then click "Healthcheck elasticsearch client" button again.
+Now that we have our `elasticsearch` instance up and running, leave the terminal with the `elasticsearch` instance up and running and go back to [localhost:8080](http://localhost:8080 "http://localhost:8080"), click the "Home" button, and then click "Healthcheck elasticsearch client" button again.
 
 We should now see the following success page:
 
 ![elasticsearch-data landing page](https://github.com/dsuare1/elasticsearch-data/blob/master/public/images/elasticsearch-data-success-page.png?raw=true)
 
-We can click the "Seed Data" button to get some data bout the &copy; Netflix original series Black Mirror (one of my favorite shows) loaded into our `elasticsearch` client.
+We can click the "Seed Data" button to get some data about the &copy; Netflix original series Black Mirror (one of my favorite shows) loaded into our `elasticsearch` client.
 
 If everything went well, you should see the following success page:
 
