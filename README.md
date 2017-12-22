@@ -57,7 +57,7 @@ Server listening on port: 8080
 
 Navigate your favorite browser to [localhost](http://localhost:8080 "http://localhost:8080") and you should see the following landing page:
 
-![elasticsearch-data landing page](elasticsearch-data/public/images/elasticsearch-data-landing-page.png)
+![elasticsearch-data landing page](https://github.com/dsuare1/elasticsearch-data/public/images/elasticsearch-data-landing-page.png)
 
 If you click on the "Healthcheck elasticsearch client" button, you should see the following error page:
 
